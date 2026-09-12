@@ -1,0 +1,279 @@
+/* Variables de color y tipografía */
+:root {
+    --color-primario: #2c3e50;
+    --color-secundario: #3498db;
+    --color-fondo: #f9f9f9;
+    --color-texto: #333;
+    --color-blanco: #fff;
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Efecto de deslizamiento al hacer click en los enlaces */
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* --- Navegación --- */
+header {
+    background-color: var(--color-primario);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: var(--color-blanco);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: var(--color-secundario);
+}
+
+/* Dropdown para Categorías */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--color-primario);
+    min-width: 150px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    list-style: none;
+    top: 100%;
+    left: 0;
+    border-radius: 0 0 5px 5px;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 10px 15px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* --- Secciones Generales --- */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 5%;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background-color: var(--color-blanco);
+    border-radius: 10px;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.hero h1 {
+    color: var(--color-primario);
+    margin-bottom: 1rem;
+}
+
+.categoria-section {
+    margin-bottom: 4rem;
+    padding-top: 2rem; /* Espacio para que el scroll ancla no tape el título */
+}
+
+.categoria-section h2 {
+    text-align: center;
+    color: var(--color-primario);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    border-bottom: 2px solid var(--color-secundario);
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+/* --- Grilla de Destinos --- */
+.grid-destinos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.destino-card {
+    background: var(--color-blanco);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.destino-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Contenedor de la imagen (mantendrá el espacio aunque la imagen falte) */
+.destino-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: #ddd; 
+}
+
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    color: var(--color-primario);
+    margin-bottom: 1rem;
+}
+
+.card-content p {
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.btn-descarga {
+    display: inline-block;
+    text-align: center;
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-descarga:hover {
+    background-color: #2980b9;
+}
+
+/* --- Nosotros y Contacto --- */
+.info-section {
+    background: var(--color-blanco);
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    padding-top: 6rem; /* Ajuste para el ancla del nav sticky */
+    margin-top: -4rem;
+}
+
+.info-section h2 {
+    color: var(--color-primario);
+    margin-bottom: 1rem;
+}
+
+.formulario-contacto {
+    max-width: 600px;
+    margin-top: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.btn-enviar {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: var(--color-secundario);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+}
+
+/* --- Diseño Responsivo --- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .dropdown-content {
+        position: static;
+        display: none;
+        box-shadow: none;
+        background-color: #34495e;
+    }
+    
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content {
+        display: block;
+    }
+}
