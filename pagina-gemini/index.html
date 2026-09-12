@@ -1,1 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubre tu Próximo Destino</title>
+    <link rel="stylesheet" href="estiloIA.css">
+</head>
+<body>
 
+    <!-- Barra de Navegación -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">ViajesSur</div>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="#destinos">Destinos ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#playas">Playas</a></li>
+                        <li><a href="#montanas">Montañas</a></li>
+                    </ul>
+                </li>
+                <li><a href="#nosotros">Quiénes Somos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección de Bienvenida -->
+        <section class="hero">
+            <h1>Explora paisajes inolvidables</h1>
+            <p>Elige tu próxima aventura entre nuestras playas y montañas destacadas.</p>
+        </section>
+
+        <!-- Categoría: Playas -->
+        <section id="playas" class="categoria-section">
+            <h2>Nuestras Playas</h2>
+            <div class="grid-destinos">
+                <!-- Destino 1 -->
+                <article class="destino-card">
+                    <img src="imagenes/mardel.png" alt="Mar del Plata">
+                    <div class="card-content">
+                        <h3>Mar del Plata</h3>
+                        <p>La ciudad balnearia más emblemática, famosa por su extensa costa, excelente gastronomía y vibrante vida nocturna. Ideal para vacaciones en familia o con amigos.</p>
+                        <a href="guias/mardel.pdf" class="btn-descarga" download>Descargar Itinerario (PDF)</a>
+                    </div>
+                </article>
+
+                <!-- Destino 2 -->
+                <article class="destino-card">
+                    <img src="imagenes/pinamar.png" alt="Pinamar">
+                    <div class="card-content">
+                        <h3>Pinamar</h3>
+                        <p>Un destino exclusivo que combina bosques de pinos con amplias playas. Perfecto para quienes buscan tranquilidad, naturaleza y paseos en cuatriciclo por los médanos.</p>
+                        <a href="guias/pinamar.pdf" class="btn-descarga" download>Descargar Itinerario (PDF)</a>
+                    </div>
+                </article>
+
+                <!-- Destino 3 -->
+                <article class="destino-card">
+                    <img src="imagenes/gesell.png" alt="Villa Gesell">
+                    <div class="card-content">
+                        <h3>Villa Gesell</h3>
+                        <p>Con un encanto bohemio y un ambiente relajado, ofrece hermosas playas, una reserva natural y un centro comercial lleno de artesanos y propuestas culturales.</p>
+                        <a href="guias/gesell.pdf" class="btn-descarga" download>Descargar Itinerario (PDF)</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Categoría: Montañas -->
+        <section id="montanas" class="categoria-section">
+            <h2>Nuestras Montañas</h2>
+            <div class="grid-destinos">
+                <!-- Destino 4 -->
+                <article class="destino-card">
+                    <img src="imagenes/bariloche.png" alt="San Carlos de Bariloche">
+                    <div class="card-content">
+                        <h3>San Carlos de Bariloche</h3>
+                        <p>Rodeada de lagos cristalinos y picos nevados, es la capital del turismo de aventura y los chocolates artesanales. Un paraíso tanto en invierno como en verano.</p>
+                        <a href="guias/bariloche.pdf" class="btn-descarga" download>Descargar Itinerario (PDF)</a>
+                    </div>
+                </article>
+
+                <!-- Destino 5 -->
+                <article class="destino-card">
+                    <img src="imagenes/aconcagua.png" alt="Cerro Aconcagua">
+                    <div class="card-content">
+                        <h3>Mendoza - Aconcagua</h3>
+                        <p>El techo de América atrae a montañistas de todo el mundo. Incluso si no buscas llegar a la cima, los senderos del Parque Provincial ofrecen vistas imponentes de los Andes.</p>
+                        <a href="guias/aconcagua.pdf" class="btn-descarga" download>Descargar Itinerario (PDF)</a>
+                    </div>
+                </article>
+
+                <!-- Destino 6 -->
+                <article class="destino-card">
+                    <img src="imagenes/chalten.png" alt="El Chaltén">
+                    <div class="card-content">
+                        <h3>El Chaltén</h3>
+                        <p>Conocida como la Capital Nacional del Trekking. Sus senderos te llevan al pie del majestuoso monte Fitz Roy, ofreciendo paisajes patagónicos de ensueño.</p>
+                        <a href="guias/chalten.pdf" class="btn-descarga" download>Descargar Itinerario (PDF)</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección Quiénes Somos -->
+        <section id="nosotros" class="info-section">
+            <h2>¿Quién mantiene este sitio?</h2>
+            <p>Este portal es mantenido por <strong>ViajesSur</strong>, un equipo de estudiantes y entusiastas del turismo local dedicados a documentar y compartir las mejores rutas y destinos. Nuestro objetivo es brindarte itinerarios precisos y actualizados para que tu única preocupación sea disfrutar del viaje.</p>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contacto" class="info-section">
+            <h2>Información de Contacto</h2>
+            <p>¿Tienes dudas o quieres sugerir un nuevo destino? Escríbenos.</p>
+            <form action="#" class="formulario-contacto">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ViajesSur. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
