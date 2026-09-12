@@ -1,1 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Destinos Reales - Playas y Montañas</title>
+  <link rel="stylesheet" href="estiloIA.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">ExploraDestinos</h1>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#contacto">Contacto</a>
+        <a href="#quien">Quién mantiene</a>
+        <div class="nav-destinos">
+          <span>Destinos</span>
+          <ul>
+            <li>Playas
+              <ul>
+                <li><a href="#mardel">Mar del Plata</a></li>
+                <li><a href="#cancun">Cancún</a></li>
+                <li><a href="#copacabana">Copacabana</a></li>
+              </ul>
+            </li>
+            <li>Montañas
+              <ul>
+                <li><a href="#aconcagua">Aconcagua</a></li>
+                <li><a href="#fitzroy">Monte Fitz Roy</a></li>
+                <li><a href="#cotopaxi">Volcán Cotopaxi</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
 
+  <main class="container">
+    <section id="destinos" class="destinos">
+      <h2>Destinos — Elige una categoría</h2>
+
+      <!-- Selector de categoría (inputs radio + CSS) -->
+      <div class="selector">
+        <input type="radio" name="categoria" id="opt-playas" checked>
+        <label for="opt-playas" class="btn-cat">Playas</label>
+
+        <input type="radio" name="categoria" id="opt-montanas">
+        <label for="opt-montanas" class="btn-cat">Montañas</label>
+      </div>
+
+      <!-- Contenido de cada categoría -->
+      <div class="category-content">
+        <!-- Playas -->
+        <div class="categoria playas" aria-hidden="false">
+          <div class="grid">
+            <article class="destino" id="mardel">
+              <img src="imagenes/mardel.png" alt="Playa de Mar del Plata">
+              <h3>Mar del Plata</h3>
+              <p>Una de las playas más populares de Argentina, conocida por su amplia costa, vida nocturna y arquitectura costera.</p>
+              <a class="guia" href="guias/mardel.pdf" download>Descargar itinerario (PDF)</a>
+            </article>
+
+            <article class="destino" id="cancun">
+              <img src="imagenes/cancun.png" alt="Playa de Cancún">
+              <h3>Cancún</h3>
+              <p>Famoso por sus playas de arena blanca y aguas turquesa en la península de Yucatán, ideal para buceo y relax.</p>
+              <a class="guia" href="guias/cancun.pdf" download>Descargar itinerario (PDF)</a>
+            </article>
+
+            <article class="destino" id="copacabana">
+              <img src="imagenes/copacabana.png" alt="Playa de Copacabana">
+              <h3>Copacabana</h3>
+              <p>Icono urbano junto al mar en Río de Janeiro, reconocido por su animada costanera y su ambiente multicultural.</p>
+              <a class="guia" href="guias/copacabana.pdf" download>Descargar itinerario (PDF)</a>
+            </article>
+          </div>
+        </div>
+
+        <!-- Montañas -->
+        <div class="categoria montanas" aria-hidden="true">
+          <div class="grid">
+            <article class="destino" id="aconcagua">
+              <img src="imagenes/aconcagua.png" alt="Aconcagua">
+              <h3>Aconcagua</h3>
+              <p>El pico más alto de América, en la cordillera de los Andes; destino para montañistas y amantes del trekking.</p>
+              <a class="guia" href="guias/aconcagua.pdf" download>Descargar itinerario (PDF)</a>
+            </article>
+
+            <article class="destino" id="fitzroy">
+              <img src="imagenes/fitzroy.png" alt="Monte Fitz Roy">
+              <h3>Monte Fitz Roy</h3>
+              <p>Montaña emblemática en la Patagonia, conocida por sus aristas y vistas espectaculares; excelente para trekking técnico.</p>
+              <a class="guia" href="guias/fitzroy.pdf" download>Descargar itinerario (PDF)</a>
+            </article>
+
+            <article class="destino" id="cotopaxi">
+              <img src="imagenes/cotopaxi.png" alt="Volcán Cotopaxi">
+              <h3>Volcán Cotopaxi</h3>
+              <p>Uno de los volcanes activos más altos del mundo, en Ecuador; ofrece rutas de ascenso, lagunas y paisajes volcánicos.</p>
+              <a class="guia" href="guias/cotopaxi.pdf" download>Descargar itinerario (PDF)</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+      <h2>Contacto</h2>
+      <p>Si tienes preguntas o quieres colaborar, escríbenos usando el formulario:</p>
+      <form class="form-contacto" action="#" method="post">
+        <label>Nombre
+          <input type="text" name="nombre" placeholder="Tu nombre">
+        </label>
+        <label>Email
+          <input type="email" name="email" placeholder="tu@ejemplo.com">
+        </label>
+        <label>Mensaje
+          <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje"></textarea>
+        </label>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <section id="quien" class="quien">
+      <h2>Quién mantiene este sitio</h2>
+      <p>Este sitio es mantenido por Exploradores S.A. — un pequeño equipo dedicado a promover viajes responsables y experiencias locales.</p>
+      <p>Contacto: info@exploradestinos.example</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 ExploraDestinos. Imágenes y guías: archivos locales en /imagenes y /guias.</p>
+    </div>
+  </footer>
+</body>
+</html>
