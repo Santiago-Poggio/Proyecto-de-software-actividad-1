@@ -1,0 +1,224 @@
+/* estiloIA.css */
+/* Reset simple */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root{
+  --accent: #0b74de;
+  --muted: #666;
+  --bg: #f7f9fc;
+  --card: #ffffff;
+  --radius: 10px;
+  --gap: 1rem;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color-scheme: light;
+}
+
+body{
+  background: var(--bg);
+  color: #222;
+  line-height: 1.45;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  min-height: 100vh;
+}
+
+/* Container */
+.container{
+  width: min(1100px, 94%);
+  margin: 0 auto;
+}
+
+/* Header & Nav */
+.site-header{
+  background: linear-gradient(90deg, #0b74de22, transparent);
+  border-bottom: 1px solid #e6eef9;
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 1rem 0;
+}
+.logo{
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* Main navigation */
+.main-nav{
+  display:flex;
+  gap: 1rem;
+  align-items: flex-start;
+  font-size: 0.95rem;
+}
+.main-nav a{
+  color: #0b3f66;
+  text-decoration: none;
+  padding: 0.35rem 0.5rem;
+}
+.nav-destinos{
+  position: relative;
+}
+.nav-destinos > span{
+  display:block;
+  font-weight:600;
+  color:#0b3f66;
+}
+/* nested lists */
+.nav-destinos ul{
+  list-style: none;
+  margin-top: 0.3rem;
+  display:flex;
+  gap: 1rem;
+}
+.nav-destinos ul li ul{ display:block; margin-left: 0.6rem; }
+.nav-destinos a{ color: #0b3f66; font-size:0.92rem; }
+
+/* Destinos section */
+.destinos{
+  margin: 1.25rem 0 2rem;
+  background: var(--card);
+  padding: 1.25rem;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(12,40,80,0.04);
+}
+
+/* Selector (radio inputs styled) */
+.selector{
+  display:flex;
+  gap: 0.5rem;
+  align-items:center;
+  margin: 0.75rem 0 1rem;
+}
+.selector input[type="radio"]{
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+}
+.selector label.btn-cat{
+  display:inline-block;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background: #eef6ff;
+  color: var(--accent);
+  border: 1px solid transparent;
+  cursor:pointer;
+  transition: all 160ms ease;
+  user-select: none;
+}
+.selector label.btn-cat:hover{ transform: translateY(-2px); }
+
+/* Content containers: hidden by default, visible by radio checked */
+.category-content .categoria{ display:none; }
+#opt-playas:checked ~ .category-content .playas { display:block; }
+#opt-montanas:checked ~ .category-content .montanas { display:block; }
+
+/* When radio is checked style its label */
+#opt-playas:checked + label[for="opt-playas"]{
+  background: var(--accent); color: #fff; box-shadow: 0 6px 18px rgba(11,116,222,0.12);
+}
+#opt-montanas:checked + label[for="opt-montanas"]{
+  background: var(--accent); color: #fff; box-shadow: 0 6px 18px rgba(11,116,222,0.12);
+}
+.selector label[for="opt-playas"]{ margin-right: 0.5rem; }
+
+/* Grid for destinations */
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+.destino{
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.95));
+  border-radius: 12px;
+  padding: 0.85rem;
+  box-shadow: 0 6px 14px rgba(10,30,60,0.04);
+  display:flex;
+  flex-direction:column;
+  gap: 0.6rem;
+  align-items:stretch;
+}
+.destino img{
+  width: 100%;
+  height: 160px;
+  object-fit:cover;
+  border-radius: 8px;
+  border: 1px solid #eef6ff;
+}
+.destino h3{ font-size:1.05rem; margin-top:0.25rem; color:#05314a;}
+.destino p{ color:var(--muted); font-size:0.95rem; margin-top:0.35rem; flex:1; }
+
+/* guía link */
+.guia{
+  margin-top: 0.6rem;
+  align-self:flex-start;
+  text-decoration:none;
+  padding: 0.45rem 0.65rem;
+  border-radius:8px;
+  background: #0b74de;
+  color:#fff;
+  font-weight:600;
+  font-size:0.9rem;
+}
+
+/* Contacto form */
+.contacto, .quien{
+  margin: 1rem 0 2rem;
+  background: var(--card);
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 14px rgba(10,30,60,0.04);
+}
+.form-contacto{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+.form-contacto label{
+  display:flex;
+  flex-direction:column;
+  font-size:0.9rem;
+  color:#09405b;
+}
+.form-contacto input, .form-contacto textarea{
+  margin-top:0.35rem;
+  padding:0.6rem;
+  border-radius:8px;
+  border:1px solid #e2eefc;
+  background:#fcfeff;
+}
+.form-contacto textarea{ grid-column: 1 / -1; }
+.form-contacto button{
+  grid-column: 1 / -1;
+  justify-self:start;
+  padding: 0.6rem 1rem;
+  border-radius:8px;
+  background: var(--accent);
+  color:#fff;
+  border:none;
+  cursor:pointer;
+  font-weight:600;
+}
+
+/* Footer */
+.site-footer{
+  margin-top: 2rem;
+  padding: 1rem 0;
+  border-top: 1px solid #e6eef9;
+  color: var(--muted);
+  font-size: 0.9rem;
+  background: transparent;
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px){
+  .main-nav{ flex-direction:column; gap:0.5rem; align-items:flex-start; }
+  .nav-destinos ul{ flex-direction:column; gap:0.25rem; }
+  .form-contacto{ grid-template-columns: 1fr; }
+  .destino img{ height: 180px; }
+}
+
+@media (max-width: 420px){
+  .destino img{ height: 140px; }
+  .selector{ flex-direction:column; align-items:flex-start; gap:0.4rem; }
+}
