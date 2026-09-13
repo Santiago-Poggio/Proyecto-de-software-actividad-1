@@ -1,138 +1,182 @@
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Destinos Reales - Playas y Montañas</title>
-  <link rel="stylesheet" href="estiloIA.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <h1 class="logo">ExploraDestinos</h1>
-      <nav class="main-nav" aria-label="Navegación principal">
-        <a href="#contacto">Contacto</a>
-        <a href="#quien">Quién mantiene</a>
-        <div class="nav-destinos">
-          <span>Destinos</span>
-          <ul>
-            <li>Playas
-              <ul>
-                <li><a href="#mardel">Mar del Plata</a></li>
-                <li><a href="#cancun">Cancún</a></li>
-                <li><a href="#copacabana">Copacabana</a></li>
-              </ul>
-            </li>
-            <li>Montañas
-              <ul>
-                <li><a href="#aconcagua">Aconcagua</a></li>
-                <li><a href="#fitzroy">Monte Fitz Roy</a></li>
-                <li><a href="#cotopaxi">Volcán Cotopaxi</a></li>
-              </ul>
-            </li>
-          </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destinos Turísticos</title>
+    <link rel="stylesheet" href="estiloIA.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="contenedor encabezado">
+        <div>
+          <h1>Descubre Destinos Increíbles</h1>
+          <p>Promoción de playas y montañas reales para tu próximo viaje</p>
         </div>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <section id="destinos" class="destinos">
-      <h2>Destinos — Elige una categoría</h2>
-
-      <!-- Selector de categoría (inputs radio + CSS) -->
-      <div class="selector">
-        <input type="radio" name="categoria" id="opt-playas" checked>
-        <label for="opt-playas" class="btn-cat">Playas</label>
-
-        <input type="radio" name="categoria" id="opt-montanas">
-        <label for="opt-montanas" class="btn-cat">Montañas</label>
+        <nav class="nav-principal">
+          <a href="#destinos">Destinos</a>
+          <a href="#contacto">Contacto</a>
+          <a href="#mantenimiento">Quién mantiene el sitio</a>
+        </nav>
       </div>
+    </header>
 
-      <!-- Contenido de cada categoría -->
-      <div class="category-content">
-        <!-- Playas -->
-        <div class="categoria playas" aria-hidden="false">
-          <div class="grid">
-            <article class="destino" id="mardel">
-              <img src="imagenes/mardel.png" alt="Playa de Mar del Plata">
+    <main>
+      <section class="hero">
+        <div class="contenedor">
+          <h2>Explora destinos turísticos por categoría</h2>
+          <p>
+            Elige una categoría para ver sus destinos y descarga tu itinerario
+            de viaje.
+          </p>
+        </div>
+      </section>
+
+      <section id="destinos" class="contenedor seccion">
+        <h2>Lista de destinos</h2>
+        <p class="intro">
+          Selecciona una categoría para visualizar los destinos disponibles.
+        </p>
+
+        <div class="selector-categorias">
+          <a href="#playas" class="boton-categoria">Ver Playas</a>
+          <a href="#montanas" class="boton-categoria">Ver Montañas</a>
+        </div>
+      </section>
+
+      <section id="playas" class="contenedor seccion">
+        <h2>Categoría: Playas</h2>
+        <div class="grid-destinos">
+          <article class="tarjeta-destino">
+            <img src="imagenes/mardel.png" alt="Mar del Plata" />
+            <div class="contenido-destino">
               <h3>Mar del Plata</h3>
-              <p>Una de las playas más populares de Argentina, conocida por su amplia costa, vida nocturna y arquitectura costera.</p>
-              <a class="guia" href="guias/mardel.pdf" download>Descargar itinerario (PDF)</a>
-            </article>
+              <p>
+                Una de las ciudades costeras más conocidas de Argentina, ideal
+                para descansar, caminar por la costa y disfrutar de su vida
+                cultural.
+              </p>
+              <a href="guias/mardel.pdf" download>Descargar itinerario</a>
+            </div>
+          </article>
 
-            <article class="destino" id="cancun">
-              <img src="imagenes/cancun.png" alt="Playa de Cancún">
-              <h3>Cancún</h3>
-              <p>Famoso por sus playas de arena blanca y aguas turquesa en la península de Yucatán, ideal para buceo y relax.</p>
-              <a class="guia" href="guias/cancun.pdf" download>Descargar itinerario (PDF)</a>
-            </article>
+          <article class="tarjeta-destino">
+            <img src="imagenes/puertomadryn.png" alt="Puerto Madryn" />
+            <div class="contenido-destino">
+              <h3>Puerto Madryn</h3>
+              <p>
+                Destino patagónico famoso por sus aguas tranquilas, fauna marina
+                y excursiones de avistaje de ballenas.
+              </p>
+              <a href="guias/puertomadryn.pdf" download>Descargar itinerario</a>
+            </div>
+          </article>
 
-            <article class="destino" id="copacabana">
-              <img src="imagenes/copacabana.png" alt="Playa de Copacabana">
-              <h3>Copacabana</h3>
-              <p>Icono urbano junto al mar en Río de Janeiro, reconocido por su animada costanera y su ambiente multicultural.</p>
-              <a class="guia" href="guias/copacabana.pdf" download>Descargar itinerario (PDF)</a>
-            </article>
-          </div>
+          <article class="tarjeta-destino">
+            <img src="imagenes/miramar.png" alt="Miramar" />
+            <div class="contenido-destino">
+              <h3>Miramar</h3>
+              <p>
+                Playa tranquila y familiar, con extensas costas, paseos
+                relajados y un ambiente ideal para vacaciones serenas.
+              </p>
+              <a href="guias/miramar.pdf" download>Descargar itinerario</a>
+            </div>
+          </article>
         </div>
+      </section>
 
-        <!-- Montañas -->
-        <div class="categoria montanas" aria-hidden="true">
-          <div class="grid">
-            <article class="destino" id="aconcagua">
-              <img src="imagenes/aconcagua.png" alt="Aconcagua">
-              <h3>Aconcagua</h3>
-              <p>El pico más alto de América, en la cordillera de los Andes; destino para montañistas y amantes del trekking.</p>
-              <a class="guia" href="guias/aconcagua.pdf" download>Descargar itinerario (PDF)</a>
-            </article>
+      <section id="montanas" class="contenedor seccion">
+        <h2>Categoría: Montañas</h2>
+        <div class="grid-destinos">
+          <article class="tarjeta-destino">
+            <img src="imagenes/bariloche.png" alt="Bariloche" />
+            <div class="contenido-destino">
+              <h3>Bariloche</h3>
+              <p>
+                Reconocido por sus paisajes andinos, lagos y centros de esquí.
+                Es uno de los destinos de montaña más emblemáticos del país.
+              </p>
+              <a href="guias/bariloche.pdf" download>Descargar itinerario</a>
+            </div>
+          </article>
 
-            <article class="destino" id="fitzroy">
-              <img src="imagenes/fitzroy.png" alt="Monte Fitz Roy">
-              <h3>Monte Fitz Roy</h3>
-              <p>Montaña emblemática en la Patagonia, conocida por sus aristas y vistas espectaculares; excelente para trekking técnico.</p>
-              <a class="guia" href="guias/fitzroy.pdf" download>Descargar itinerario (PDF)</a>
-            </article>
+          <article class="tarjeta-destino">
+            <img src="imagenes/villalaangostura.png" alt="Villa La Angostura" />
+            <div class="contenido-destino">
+              <h3>Villa La Angostura</h3>
+              <p>
+                Rodeada de bosques, montañas y lagos, combina naturaleza,
+                tranquilidad y una experiencia turística de gran belleza.
+              </p>
+              <a href="guias/villalaangostura.pdf" download
+                >Descargar itinerario</a
+              >
+            </div>
+          </article>
 
-            <article class="destino" id="cotopaxi">
-              <img src="imagenes/cotopaxi.png" alt="Volcán Cotopaxi">
-              <h3>Volcán Cotopaxi</h3>
-              <p>Uno de los volcanes activos más altos del mundo, en Ecuador; ofrece rutas de ascenso, lagunas y paisajes volcánicos.</p>
-              <a class="guia" href="guias/cotopaxi.pdf" download>Descargar itinerario (PDF)</a>
-            </article>
-          </div>
+          <article class="tarjeta-destino">
+            <img src="imagenes/cafayate.png" alt="Cafayate" />
+            <div class="contenido-destino">
+              <h3>Cafayate</h3>
+              <p>
+                Ubicado entre cerros y valles, ofrece paisajes únicos, cultura
+                regional y rutas escénicas impresionantes.
+              </p>
+              <a href="guias/cafayate.pdf" download>Descargar itinerario</a>
+            </div>
+          </article>
         </div>
+      </section>
+
+      <section id="contacto" class="contenedor seccion">
+        <h2>Contacto</h2>
+        <form class="formulario">
+          <label for="nombre">Nombre</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Tu nombre"
+          />
+
+          <label for="email">Correo electrónico</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="tu@email.com"
+          />
+
+          <label for="mensaje">Mensaje</label>
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            rows="5"
+            placeholder="Escribe tu consulta"
+          ></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+
+      <section id="mantenimiento" class="contenedor seccion">
+        <h2>Quién mantiene el sitio</h2>
+        <p>
+          Este sitio es mantenido por un equipo dedicado a la difusión
+          turística, con el objetivo de mostrar destinos reales de forma simple,
+          clara y accesible.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="contenedor">
+        <p>
+          &copy; 2026 Destinos Turísticos. Sitio estático responsivo sin
+          scripts.
+        </p>
       </div>
-    </section>
-
-    <section id="contacto" class="contacto">
-      <h2>Contacto</h2>
-      <p>Si tienes preguntas o quieres colaborar, escríbenos usando el formulario:</p>
-      <form class="form-contacto" action="#" method="post">
-        <label>Nombre
-          <input type="text" name="nombre" placeholder="Tu nombre">
-        </label>
-        <label>Email
-          <input type="email" name="email" placeholder="tu@ejemplo.com">
-        </label>
-        <label>Mensaje
-          <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje"></textarea>
-        </label>
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
-
-    <section id="quien" class="quien">
-      <h2>Quién mantiene este sitio</h2>
-      <p>Este sitio es mantenido por Exploradores S.A. — un pequeño equipo dedicado a promover viajes responsables y experiencias locales.</p>
-      <p>Contacto: info@exploradestinos.example</p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2026 ExploraDestinos. Imágenes y guías: archivos locales en /imagenes y /guias.</p>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
